@@ -1,7 +1,6 @@
 #!/bin/bash
-echo "Running apt-get update"
-apt-get update
-echo "apt-get update complete"
-echo "Running apt-get upgrade"
-apt-get upgrade
-echo "apt-get upgrade complete"
+echo "Hello World!"
+echo "A second line"
+echo "Adding a 3rd line"
+echo "And a 4th line now"
+echo "some extra  line of echo just for the hell of it"
