@@ -1,6 +1,6 @@
 #!/bin/bash
 dateTime="$(date +%Y-%m-%d_%H%M%S)"
-logDirectory="$HOME/logs"
+logDirectory="/var/log/firstBashScript/"
 logFile="firstBashScript_log_$dateTime.txt"
 if test ! -d $logDirectory
 	then
