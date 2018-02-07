@@ -15,6 +15,7 @@ fi
 if [ ! -f $logDirectory$logFile ];
 	then
 		echo "Creating log file $logFile in $logDirectory"
+		cd $logDirectory
 		touch $logFile
 fi
 
@@ -22,13 +23,13 @@ fi
 echo "Updating your machine now..."
 
 # Echo script start time to log
-echo "Update started at $dateTime" >> $logDirectory$logFile
+echo "Update started at $(date)" >> $logDirectory$logFile
 
 # Run apt-get commands to update repos and apply any relevant updates
 (apt-get update && apt-get upgrade -y) >> $logDirectory$logFile
 
 # Echo completetion time to log
-echo "Update completed at $(date +%Y-%m-%d_%H%M%S)" >> $logDirectory$logFile
+echo "Update completed at $(date)" >> $logDirectory$logFile
 
 # Confirm update has finished
 echo "Done updating"
